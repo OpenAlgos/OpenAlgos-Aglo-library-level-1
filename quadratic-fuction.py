@@ -36,10 +36,18 @@ def calculating_discriminant():
     "Considering every possible outcome... but I guess only one matters here.",
     "Cross-referencing previous calculations... okay, maybe not, but it sounds smart.",
     "Evaluating the situation... recalculating... okay, I think I’ve got it."
-    ]    
-    prompts = random.choice(thinking_prompts)
-    time.sleep(0.7)
-    print(prompts)
+    ] 
+    
+    time_sleep = [0.7,0.5,1,2.3,1.2]   
+    for i in range(4):
+        prompt = random.choice(thinking_prompts)
+        
+        time_random = random.choice(time_sleep)
+        
+        print(prompt)
+        time.sleep(time_random)
+        
+        thinking_prompts.remove(prompt)
     
 
     
@@ -58,14 +66,28 @@ print("  - c is the constant term\n")
 a = float(input("Enter coefficient a: "))
 b = float(input("Enter coefficient b: "))
 c = float(input("Enter coefficient c: "))
-calculating_discriminant()
+
     
 discriminant = b**2 - 4*a*c
+
+
 if(discriminant >= 0):
 
     root1 = -b + math.sqrt(discriminant) / 2 * a
 
     root2 = -b - math.sqrt(discriminant) / 2 * a
+    
+    first_overthinker_random()
+    time.sleep(0.7)
+    calculating_discriminant()
+    
+    
+    print(f"\nRoots of quadratic equation are",end = " ")
+    time.sleep(0.5)
+    print(f"{root1} and", end = " ")
+    time.sleep(0.3)
+    print(f"{root2}")
+    
     
 else:
     print("No real root")
