@@ -5,6 +5,7 @@ import math
 #for now, it is solving quadratic equation only
 
 #defining the first random excuse
+time_sleep = [0.7,0.5,1,2.3,1.2] 
 def first_overthinker_random():
     excuses = [
     "Hmm, let me think about this for a second...",
@@ -21,24 +22,24 @@ def first_overthinker_random():
     
 def calculating_discriminant():
     thinking_prompts = [
-    "Hmm, let me analyze these numbers for a moment... They seem simple, but looks can be deceiving.",
-    "Okay, plugging these into the formula... but wait, should I double-check? Nah, let's keep going.",
-    "Calculating the discriminant... this could take a second. Or maybe more. Let's not rush this.",
-    "Alright, I'm breaking it down. Step by step... there's no room for errors here.",
-    "Wait a minute... am I missing something? No, I think we're good. Let's move forward.",
-    "Reevaluating all possible scenarios... what if 'a' was 0? Oh, never mind, that would be a different equation.",
-    "Discriminant formula... right... b² minus 4ac. Yeah, that looks good. But let me run it again, just to be sure.",
-    "Crunching the numbers... carrying the one... wait, there’s no one to carry. Focus!",
-    "This part feels tricky, but we can handle it... just gotta keep my mind on the discriminant.",
-    "Almost there, I can feel the answer coming... it’s close. Very close.",
-    "Running some extra checks... just in case the math gods are testing my patience.",
-    "Is this taking too long? Or is it the perfect amount of time to give you an accurate answer?",
-    "Considering every possible outcome... but I guess only one matters here.",
-    "Cross-referencing previous calculations... okay, maybe not, but it sounds smart.",
-    "Evaluating the situation... recalculating... okay, I think I’ve got it."
+    "Analyzing this carefully...",
+    "This needs a bit more attention...",
+    "Let’s not rush through this...",
+    "Making sure everything adds up...",
+    "Processing... slowly but surely...",
+    "Taking my time with this one...",
+    "Breaking it down step by step...",
+    "Giving this problem the attention it deserves...",
+    "Double-checking all possibilities...",
+    "Thinking deeply... almost there...",
+    "Considering every detail...",
+    "Going through all the scenarios...",
+    "Taking a moment to reflect...",
+    "Carefully piecing things together...",
+    "Digging into the details..."
     ] 
     
-    time_sleep = [0.7,0.5,1,2.3,1.2]   
+      
     for i in range(4):
         prompt = random.choice(thinking_prompts)
         
@@ -48,6 +49,34 @@ def calculating_discriminant():
         time.sleep(time_random)
         
         thinking_prompts.remove(prompt)
+        
+def thinking_before_discriminant():
+    discriminant_thinking_prompts = [
+        "Calculating the discriminant...",
+        "Breaking down the b² part...",
+        "Multiplying 4 with 'a' and 'c'...",
+        "Subtracting the results carefully...",
+        "Evaluating b² - 4ac now...",
+        "Checking if the discriminant is positive...",
+        "This looks like a quadratic case...",
+        "Balancing the equation...",
+        "Almost done with b² - 4ac...",
+        "Finalizing the discriminant...",
+        "Carefully evaluating each step...",
+        "Working through b², 4ac...",
+        "Getting closer to the final result...",
+        "Just about ready to solve for roots...",
+        "Wrapping up the discriminant calculation..."
+    ]
+    time_random = random.choice(time_sleep)
+    
+    
+    for i in range(2):
+        random_prompt = random.choice(discriminant_thinking_prompts)
+        print(random_prompt)
+        discriminant_thinking_prompts.remove(random_prompt)
+        time.sleep(time_random)
+    
     
 
     
@@ -67,11 +96,17 @@ a = float(input("Enter coefficient a: "))
 b = float(input("Enter coefficient b: "))
 c = float(input("Enter coefficient c: "))
 
-    
+
+
+print("Now calculating the discriminant...") 
+thinking_before_discriminant() 
 discriminant = b**2 - 4*a*c
 
 
+
 if(discriminant >= 0):
+    print(f"Discriminant is {discriminant}")
+    
 
     root1 = -b + math.sqrt(discriminant) / 2 * a
 
@@ -90,7 +125,7 @@ if(discriminant >= 0):
     
     
 else:
-    print("No real root")
+    print("Discriminant is negative so no real roots")
 
 
 
