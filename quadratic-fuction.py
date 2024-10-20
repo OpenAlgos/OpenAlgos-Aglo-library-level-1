@@ -5,14 +5,14 @@ import math
 #for now, it is solving quadratic equation only
 
 #defining the first random excuse
-time_sleep = [0.7,0.5,1,2.3,1.2] 
+time_sleep = [0.7,0.5,1,0.3,1.2] 
 def first_overthinker_random():
     excuses = [
-    "Hmm, let me think about this for a second...",
-    "Are you sure this is the right problem to solve?",
-    "Wait, let's consider all possible scenarios first...",
-    "This feels more complex than it seems.",
-    "Okay, hold on, this might take a while..."
+    "Hmm, let me think about this for a second...\n",
+    "Are you sure this is the right problem to solve?\n",
+    "Wait, let's consider all possible scenarios first...\n",
+    "This feels more complex than it seems.\n",
+    "Okay, hold on, this might take a while...\n"
     ]
     
     excuse_1 = random.choice(excuses)
@@ -22,21 +22,21 @@ def first_overthinker_random():
     
 def calculating_discriminant():
     thinking_prompts = [
-    "Analyzing this carefully...",
-    "This needs a bit more attention...",
-    "Let’s not rush through this...",
-    "Making sure everything adds up...",
-    "Processing... slowly but surely...",
-    "Taking my time with this one...",
-    "Breaking it down step by step...",
-    "Giving this problem the attention it deserves...",
-    "Double-checking all possibilities...",
-    "Thinking deeply... almost there...",
-    "Considering every detail...",
-    "Going through all the scenarios...",
-    "Taking a moment to reflect...",
-    "Carefully piecing things together...",
-    "Digging into the details..."
+    "Analyzing this carefully...\n",
+    "This needs a bit more attention...\n",
+    "Let’s not rush through this...\n",
+    "Making sure everything adds up...\n",
+    "Processing... slowly but surely...\n",
+    "Taking my time with this one...\n",
+    "Breaking it down step by step...\n",
+    "Giving this problem the attention it deserves...\n",
+    "Double-checking all possibilities...\n",
+    "Thinking deeply... almost there...\n",
+    "Considering every detail...\n",
+    "Going through all the scenarios...\n",
+    "Taking a moment to reflect...\n",
+    "Carefully piecing things together...\n",
+    "Digging into the details...\n"
     ] 
     
       
@@ -52,21 +52,21 @@ def calculating_discriminant():
         
 def thinking_before_discriminant():
     discriminant_thinking_prompts = [
-        "Calculating the discriminant...",
-        "Breaking down the b² part...",
-        "Multiplying 4 with 'a' and 'c'...",
-        "Subtracting the results carefully...",
-        "Evaluating b² - 4ac now...",
-        "Checking if the discriminant is positive...",
+        "Calculating the discriminant...\n",
+        "Breaking down the b² part...\n",
+        "Multiplying 4 with 'a' and 'c'...\n",
+        "Subtracting the results carefully...\n",
+        "Evaluating b² - 4ac now...\n",
+        "Checking if the discriminant is positive...\n",
         "This looks like a quadratic case...",
-        "Balancing the equation...",
-        "Almost done with b² - 4ac...",
-        "Finalizing the discriminant...",
-        "Carefully evaluating each step...",
-        "Working through b², 4ac...",
-        "Getting closer to the final result...",
-        "Just about ready to solve for roots...",
-        "Wrapping up the discriminant calculation..."
+        "Balancing the equation...\n",
+        "Almost done with b² - 4ac...\n",
+        "Finalizing the discriminant...\n",
+        "Carefully evaluating each step...\n",
+        "Working through b², 4ac...\n",
+        "Getting closer to the final result...\n",
+        "Just about ready to solve for roots...\n",
+        "Wrapping up the discriminant calculation...\n"
     ]
     time_random = random.choice(time_sleep)
     
@@ -104,8 +104,13 @@ discriminant = b**2 - 4*a*c
 
 
 
+
+
 if(discriminant >= 0):
+    
     print(f"Discriminant is {discriminant}")
+    user_input_after_discriminant = input("Type any key to proceed further:")
+    print(" ")
     
 
     root1 = -b + math.sqrt(discriminant) / 2 * a
