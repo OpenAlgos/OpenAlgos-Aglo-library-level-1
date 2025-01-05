@@ -1,4 +1,4 @@
-#welcome to OpenAlgos algorithm library level 1
+1#welcome to OpenAlgos algorithm library level 1
 import time
 import random
 import math
@@ -174,7 +174,40 @@ def college_ranker():
             print(f"Rank {y + 1}, {college_ranking[y]}")
             y += 1
 
+def split_sort():
+    #by Shardul Funde
+    # Split Sort algorithm
+    # Split Sort is a sorting algorithm that sorts a list of integers in ascending order
+    # by splitting the list into two parts, sorting the parts separately, and then merging them back together.
+    # The algorithm is implemented using a while loop and if-else statements.
 
+    # Input list of integers to be sorted
+    l = list(map(int, input("Enter integers separated by space: ").split()))
+    y = []
+
+    i = 0
+    while i < len(l) - 1:
+        if(l[i] > l[i + 1]):
+            y.append(l[i + 1])
+            l.pop(i + 1) 
+        else:
+            i += 1
+
+    sorted_list = []
+
+    sorted_list = l.copy()
+    i = 0
+
+    while i < len(y):
+
+        for c in range(len(sorted_list)):
+            if(y[i] <= sorted_list[c]):
+                sorted_list.insert(c, y[i])
+                break
+
+        i += 1
+
+    print(sorted_list)
 
 
 def main():
@@ -183,18 +216,24 @@ def main():
         print("Select an algorithm to run:")
         print("1. Thinking Calculator")
         print("2. College Ranker")
-        print("3. Exit")
+        print("3. Split Sort")
+        print("4. Exit")
         
         user_choice = int(input("Enter your choice (Serial number of choice): "))
         
         if(user_choice == 1):
             solve_quadratic()
             
-        if(user_choice == 2):
+        elif(user_choice == 2):
             college_ranker()
             
-        if(user_choice == 3):
-            break
+        elif(user_choice == 3):
+            split_sort()
+        
+        elif(user_choice == 4):
+            print("Thank you for using OpenAlgos algorithm library level 1")
+            break 
+        
             
         
             
