@@ -1,5 +1,6 @@
-1#welcome to OpenAlgos algorithm library level 1
+#welcome to OpenAlgos algorithm library level 1
 import time
+
 import random
 import math
 def solve_quadratic():
@@ -8,20 +9,32 @@ def solve_quadratic():
 
     #defining the first random excuse
     time_sleep = [0.7,0.5,1,0.3,1.2] 
+    
+    #defining the first random excuse
     def first_overthinker_random():
         excuses = [
         "Hmm, let me think about this for a second...\n",
         "Are you sure this is the right problem to solve?\n",
         "Wait, let's consider all possible scenarios first...\n",
         "This feels more complex than it seems.\n",
-        "Okay, hold on, this might take a while...\n"
+        "Okay, hold on, this might take a while...\n",
+        "I need to double-check my calculations...\n",
+        "This requires some deep thinking...\n",
+        "Let me ponder over this for a moment...\n",
+        "I need to make sure I get this right...\n",
+        "This is a tough one, give me a second...\n",
+        "I need to analyze this from all angles...\n",
+        "This might take some extra time...\n",
+        "I need to ensure every detail is correct...\n",
+        "Let me take a closer look at this...\n",
+        "I need to think this through carefully...\n"
         ]
         
         excuse_1 = random.choice(excuses)
         time.sleep(0.7)
         
         print(excuse_1)
-        
+    #defining the second random excuse    
     def calculating_discriminant():
         thinking_prompts = [
         "Analyzing this carefully...\n",
@@ -41,7 +54,7 @@ def solve_quadratic():
         "Digging into the details...\n"
         ] 
         
-        
+        #randomly selecting the prompt
         for i in range(4):
             prompt = random.choice(thinking_prompts)
             
@@ -51,7 +64,7 @@ def solve_quadratic():
             time.sleep(time_random)
             
             thinking_prompts.remove(prompt)
-            
+    #defining the third random excuse        
     def thinking_before_discriminant():
         discriminant_thinking_prompts = [
             "Calculating the discriminant...\n",
@@ -86,7 +99,8 @@ def solve_quadratic():
     
     #intro    
     
-
+#by Shardul Funde
+    print("Welcome to the Thinking Calculator!")
     print("This program solves quadratic equations of the form ax^2 + bx + c = 0.")
     print("You will need to input the values for a, b, and c, where:")
     print("  - a is the coefficient of x^2 (quadratic term)")
@@ -99,7 +113,7 @@ def solve_quadratic():
     c = float(input("Enter coefficient c: "))
 
 
-
+    #calculating the discriminant
     print("Now calculating the discriminant...") 
     thinking_before_discriminant() 
     discriminant = b**2 - 4*a*c
@@ -114,7 +128,7 @@ def solve_quadratic():
         user_input_after_discriminant = input("Type any key to proceed further:")
         print(" ")
         
-
+        #calculating roots
         root1 = -b + math.sqrt(discriminant) / 2 * a
 
         root2 = -b - math.sqrt(discriminant) / 2 * a
@@ -132,6 +146,7 @@ def solve_quadratic():
         
         
     else:
+        
         print("Discriminant is negative so no real roots")
         
 def college_ranker():
