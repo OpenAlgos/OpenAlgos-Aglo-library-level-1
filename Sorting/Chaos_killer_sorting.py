@@ -1,4 +1,4 @@
-#Made by Shardul Funde
+
 l = list(map(int, input("Enter integers separated by space: ").split()))
 y = []
 
@@ -25,6 +25,3 @@ while i < len(y):
     i += 1
             
 print(sorted_list)
-        
-        
-
