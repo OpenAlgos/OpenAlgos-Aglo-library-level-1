@@ -1,105 +1,72 @@
 # Bigram Language Model Text Autocomplete
 
-A sophisticated implementation of a bigram language model for text autocompletion in Python. This program learns word patterns from user input and predicts the next words based on the previous two words using frequency analysis.
+A simple implementation of a bigram language model for text autocompletion in Python. This program learns word patterns from user input and predicts the next words based on frequency analysis.
 
 ## Features
 
-- Interactive training mode for bigram model building
-- Text autocompletion based on learned word triplets
-- Customizable number of predicted words
-- Frequency-based prediction using two-word context
-- More accurate predictions compared to unigram model
+- Interactive training mode to build the language model
+- Text autocompletion based on learned word patterns
+- Customizable number of words to autocomplete
+- Frequency-based word prediction
 
 ## How It Works
 
 1. **Training Phase:**
    - The program accepts sentences as input 
-   - Analyzes word triplets (three consecutive words)
+   - Analyzes word pairs and their frequencies
    - Builds a frequency dictionary of word combinations
-   - Stores patterns based on two-word context
 
 2. **Prediction Phase:**
-   - Takes user input text (minimum two words)
-   - Predicts next words based on the last two words
-   - Uses frequency analysis to determine most likely next word
-   - Updates context window as predictions are made
+   - Takes user input text
+   - Predicts next words based on the last word
+   - Uses frequency analysis to determine most likely next words
 
 ## Usage
 
 1. Run the program:
-   ```python
-   python bigram.py
+```python
+python Bigram.py
 
+2. Training the model:
+   - Enter training sentences when prompted
+   - Type "stop the training" to end training mode
 
-
-```markdown
-## Training the Model
-
-1. Start the training process by running the program
-2. Enter complete sentences when prompted:
-   - Each sentence should contain at least 3 words
-   - Program creates word triplets from input
-   - Frequencies are tracked for each triplet
-3. Continue entering sentences to build the model
-4. Type "stop the training" when finished
-5. The model learns:
-   - Word relationships
-   - Pattern frequencies
-   - Common language structures
-
-
-
-## Using Autocompletion
-
-1. After training, enter at least two words as context
-2. Specify the number of words you want to predict
-3. The system will:
-   - Analyze the last two words
-   - Find matching patterns
-   - Generate predictions based on frequency
-   - Update context for each prediction
-4. Type "stop the program12" to exit
-
-
+3. Using autocompletion:
+   - Enter text to autocomplete
+   - Specify number of words to predict
+   - Type "stop the program12" to exit
 
 ## Example
 
-Enter your sentence: the cat sat on the mat
-Enter your sentence: the black cat sat on the chair
+Enter your sentence: the cat sat on mat
+Enter your sentence: the dog ran in park
 Enter your sentence: stop the training
 
 Type some text below to autocomplete
-the black
+the
 No of words for autocompletion: 2
-cat sat
+cat dog
 
 
 
 ## Technical Details
 
-- Uses nested lists to store word triplets and frequencies
-- Implements sliding window approach for context
-- Maintains two-word context for predictions
+- Uses nested lists to store word pairs and their frequencies
+- Implements frequency-based prediction algorithm
 - Written in Python 3
-- Handles cases where no matching patterns are found
+
 
 
 ## Limitations
 
-- Requires more training data than unigram model
-- Higher memory usage due to storing triplets
-- May not handle rare word combinations well
-- Needs at least two words for prediction
-- No smoothing implementation for unseen combinations
+- Basic implementation without smoothing
+- Requires sufficient training data for accurate predictions
+- Memory usage scales with training data size
 
 
 ## Contributing
 
-Feel free to fork this repository and submit pull requests to contribute to this project. Areas for improvement include:
-- Adding smoothing techniques
-- Implementing better memory management
-- Improving prediction accuracy
-- Adding support for larger n-grams
+Feel free to fork this repository and submit pull requests to contribute to this project.
 
 
 ## License
