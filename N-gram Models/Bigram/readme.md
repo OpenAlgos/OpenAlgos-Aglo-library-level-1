@@ -24,7 +24,7 @@ A simple implementation of a bigram language model for text autocompletion in Py
 ## Usage
 
 1. Run the program:
-```python
+
 python Bigram.py
 
 2. Training the model:
